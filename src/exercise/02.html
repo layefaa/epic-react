@@ -25,7 +25,11 @@
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
 
-    const elementProps = {className: 'container', children: 'Hello world!'}
+
+    const spanType = 'span'
+    const spanElement1 = React.createElement(spanType,{children: 'Hello', key:0})
+    const spanElement2 = React.createElement(spanType,{children: 'World', key:1} )
+    const elementProps = {className: 'container', children: [spanElement1,' ',spanElement2]}
     const elementType = 'div'
     const reactElement = React.createElement(elementType, elementProps)
     ReactDOM.render(reactElement,rootElement)
